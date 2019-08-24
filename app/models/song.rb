@@ -10,6 +10,7 @@ class Song < ActiveRecord::Base
 
   def artist_name
     self.artist ? self.artist.name : nil
+  end
 
   def genre_name=(name)
     genre = Genre.find_or_create_by(name: name)
